@@ -1,23 +1,22 @@
 package com.example.lzctbyong.firstapp.TaskDetail;
 
+import com.example.lzctbyong.firstapp.Utils.BasePresenter;
+import com.example.lzctbyong.firstapp.Utils.BaseView;
+
 /**
  * Created by lzctbyong on 2017/1/30.
  */
 
 public class TaskDetailContract {
 
-    interface View {
-        void setPresenter(Presenter mPresenter);
+    interface View extends BaseView<Presenter> {
 
         void setText(String s);
     }
 
-    interface Presenter {
+    interface Presenter extends BasePresenter {
 
         void getTask();
 
-        void subscribe();
-
-        void unsubscribe();
     }
 }
